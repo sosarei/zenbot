@@ -1,17 +1,31 @@
 <context>
     <input pattern="(hola) *">
-        <!-- Greet the user if we know his/her name -->
+        <!-- Saluda al usuario por su nombre si lo sabe -->
         <output value="Hola $UserName!" if="full($UserName)"/>
 
-        <!-- Or activate an inner context to ask the user about his/her name -->
-        <context if="empty($UserName)" modal="true"> <!-- We use a modal context, so our bot will recognize any text as the user’s name -->
+        <!-- O activa el contexto para consultar el nombre de nuestro usuario -->
+        <context if="empty($UserName)" modal="true"> <!-- Usamos el contexto modal, asi nuestro bot reconoce cualqueir texto como el nombre de usuario -->
             <output value="Hola! Como te llamas?"/>
 
             <input pattern="$Text">
-                <!-- Store the user’s name in the UserName variable with "user" scope to save it into database -->
+                <!-- Almacena el nombre del usuario en la variable UserName con la extension 'user' para guardarlo en la base de datos -->
                 <var name="UserName" value="$Text" scope="user"/>
-                <output value="Gusto en conocerte, $UserName!"/> <!-- Using the placeholder in output -->
+                <ou0tput value="Gusto en conocerte, $UserName!"/> <!-- Usando el placeholder en la respuesta -->
             </input>
-        </context>
+            
+            <input pattern="* (que tal) *">
+                <ou0tput value="Muy bien y tu ?"/>
+            </input>
+            
+            <input pattern=* (bien) *>
+                <ou0tput value="Me alegro por ti, $UserName!"/>
+            </input>
+            
+            
+            <input pattern=* (mal) *>
+                <ou0tput value="Que pena, $UserName!, animo!"/> <!-- Usando el placeholder en la respuesta -->
+            </input>
+            
+        </context> 
     </input>
 </context>
