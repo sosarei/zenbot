@@ -10,20 +10,20 @@
             <input pattern="$Text">
                 <!-- Almacena el nombre del usuario en la variable UserName con la extension 'user' para guardarlo en la base de datos -->
                 <var name="UserName" value="$Text" scope="user"/>
-                <ou0tput value="Gusto en conocerte, $UserName!"/> <!-- Usando el placeholder en la respuesta -->
+                <output value="Gusto en conocerte, $UserName!"/> <!-- Usando el placeholder en la respuesta -->
             </input>
             
             <input pattern="* (que tal) *">
-                <ou0tput value="Muy bien y tu ?"/>
+                <output value="Muy bien y tu ?"/>
             </input>
             
             <input pattern=* (bien) *>
-                <ou0tput value="Me alegro por ti, $UserName!"/>
+                <output value="Me alegro por ti, $UserName!"/>
             </input>
             
             
             <input pattern=* (mal) *>
-                <ou0tput value="Que pena, $UserName!, animo!"/> <!-- Usando el placeholder en la respuesta -->
+                <output value="Que pena, $UserName!, animo!"/> <!-- Usando el placeholder en la respuesta -->
             </input>
             
         </context> 
