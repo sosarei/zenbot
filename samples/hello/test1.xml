@@ -13,16 +13,16 @@
                 <output value="Gusto en conocerte, $UserName!"/> <!-- Usando el placeholder en la respuesta -->
             </input>
             
-            <input pattern="* (que tal| como estas) *">
+            <input pattern=" (que tal| como estas) *">
                 <output value="Muy bien y tu ?"/>
             </input>
             
-            <input pattern=* (bien) *>
+            <input pattern=" (bien) *">
                 <output value="Me alegro por ti, $UserName!"/>
             </input>
             
             
-            <input pattern=* (mal) *>
+            <input pattern=" (mal) *">
                 <output value="Que pena, $UserName!, animo!"/> <!-- Usando el placeholder en la respuesta -->
             </input>
             
