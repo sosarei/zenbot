@@ -14,7 +14,7 @@
             </input>
             
             <input pattern=" (que tal| como estas) *">
-                <output value="Muy bien y tu ?"/>
+                <output value="Muy bien y tu?"/>
             </input>
             
             <input pattern=" (bien) *">
