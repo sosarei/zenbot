@@ -14,7 +14,7 @@
             </input>
         </context> 
         <context if="full($UserName)" modal="true">
-             <input pattern=" (que tal| como estas) *">
+             <input pattern=" (que tal) *">
                  <output value="Muy bien y tu?"/>
              </input>
              <input pattern=" (bien) *">
