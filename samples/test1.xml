@@ -11,8 +11,8 @@
                 <!-- Almacena el nombre del usuario en la variable UserName con la extension 'user' para guardarlo en la base de datos -->
                 <var name="UserName" value="$Text" scope="user"/>
                   <output>
-                    <item>Hola, $UserName!</item>
                     <item>Gusto en conocerte, $UserName!</item>
+                    <item>Hola, $UserName!</item>
                     <item>Buen dia, $UserName!</item>
                   </output>
             </input>
