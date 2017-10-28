@@ -1,28 +1,10 @@
 <context>
-    <input pattern="(hola) *">
-        <!-- Saluda al usuario por su nombre si lo sabe -->
-        <output if="full($UserName)">
-            <item>Hola, $UserName!</item>
-            <item>Buen dia, $UserName!</item>
-        </output>
+  <input pattern="* (weather|forecast) [$Date]">
+    <output value="The weather is fine!"/> <!-- Nice response! -->
 
-        <!-- O activa el contexto para consultar el nombre de nuestro usuario -->
-        <context if="empty($UserName)" modal="true"> <!-- Usamos el contexto modal, asi nuestro bot reconoce cualqueir texto como el nombre de usuario -->
-            <output value="Hola! Como te llamas?"/>
-
-            <input pattern="$Text">
-                <!-- Almacena el nombre del usuario en la variable UserName con la extension 'user' para guardarlo en la base de datos -->
-                <var name="UserName" value="$Text" scope="user"/>
-                  <output value = "Gusto en conocerte, $UserName!"/>
-            </input>
-        </context>
-        
-        <context if=full($UserName)>
-            <input pattern = "* (que tal|como estas) *">
-                <output>
-                    <item>Muy bien y tu?</item>
-                    <item>No muy bien y tu?</item>
-                </output>
-        </context>
-    </input>
+    <context id="weather_context">
+      <input pattern="* $Date"/>
+      <output value="It will be much better!"/>
+    </context>
+  </input>
 </context>
