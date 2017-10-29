@@ -1,5 +1,4 @@
 <context> <!-- A regular context -->
-  $req_lang == "es"
   <input id="greeting" pattern="* (recuerdame|recordar) $Text">
     <output value="Hecho!" if="full($Text)" lang="es"/>
     <output value="Done!" if="full($Text)"/>
