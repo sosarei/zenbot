@@ -1,6 +1,6 @@
 <context> <!-- A regular context -->
   $req_lang == "es"
-  <input id="greeting" pattern="* recuerda [me] $Text">
+  <input id="greeting" pattern="* (recuerdame|recordar) $Text">
     <output value="Hechi!" if="full($Text)"/>
 
     <context if="empty($Text)" modal="true"> <!-- A modal context -->
