@@ -9,8 +9,8 @@
       <output value="What would you like me to remember you?"/>
 
       <input pattern="$Text">
-        <output value="Hecho! lang="es"/>
-        <output value="Done!/>                              
+        <output value="Hecho!" lang="es"/>
+        <output value="Done!"/>
       </input>
 
     </context>
