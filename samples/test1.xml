@@ -1,5 +1,5 @@
 <context>
-  <input pattern="* (weather|forecast) [$Date]">
+  <input pattern="* (weather|forecast)">
     <output value="The weather is fine!"/> <!-- Nice response! -->
 
     <context id="weather_context">
