@@ -1,15 +1,12 @@
 <context> <!-- A regular context -->
   <input id="greeting" pattern="* (recuerdame|recordar) $Text">
-    <output value="Hecho!" if="full($Text)" lang="es"/>
-    <output value="Done!" if="full($Text)"/>
+    <output value="Hecho!" if="full($Text)"/>
 
     <context if="empty($Text)" modal="true"> <!-- A modal context -->
-      <output value="Que te gustaria que te recuerde?" lang="es"/>
-      <output value="What would you like me to remember you?"/>
+      <output value="Que te gustaria que te recuerde?"/>
 
       <input pattern="$Text">
-        <output value="Hecho!" lang="es"/>
-        <output value="Done!"/>
+        <output value="Hecho!"/>
       </input>
 
     </context>
