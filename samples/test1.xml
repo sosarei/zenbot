@@ -7,7 +7,7 @@
       <output value="Que te gustaria que te recuerde?"/>
 
       <input pattern="$Text">
-        <output value="Hecho! $Date"/>
+        <output value="Hecho! $SystemDate"/>
       </input>
 
     </context>
