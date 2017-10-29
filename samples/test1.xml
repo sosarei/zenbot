@@ -1,10 +1,14 @@
-<context>
-  <input pattern="* (weather|forecast) *">
-    <output value="The weather is fine!"/> <!-- Nice response! -->
+<context> <!-- A regular context -->
+  <input id="greeting" pattern="* remind [me] [to] $Text">
+    <output value="Done!" if="full($Text)"/>
 
-    <context id="weather_context">
-      <input pattern="* [$Date]"/>
-      <output value="It will be much better!" if="full($Date)"/>
+    <context if="empty($Text)" modal="true"> <!-- A modal context -->
+      <output value="What would you like me to remind you about?"/>
+
+      <input pattern="$Text">
+        <output value="Done!"/>
+      </input>
+
     </context>
   </input>
 </context>
