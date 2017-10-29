@@ -1,12 +1,12 @@
-<context> <!-- A regular context -->
-  <input id="greeting" pattern="* remind [me] [to] $Text">
-    <output value="Done!" if="full($Text)"/>
+<context $req_lang == "es"> <!-- A regular context -->
+  <input id="greeting" pattern="* recuerda [me] $Text">
+    <output value="Hechi!" if="full($Text)"/>
 
     <context if="empty($Text)" modal="true"> <!-- A modal context -->
-      <output value="What would you like me to remind you about?"/>
+      <output value="Que te gustaria que te recuerde?"/>
 
       <input pattern="$Text">
-        <output value="Done!"/>
+        <output value="Hecho!"/>
       </input>
 
     </context>
